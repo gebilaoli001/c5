@@ -13,7 +13,7 @@ int main()
 {
 
     printf("xueshengchengjiguanlixitong\n");
-    int sum=0;
+    int sum = 0;
 
     while (1)
     {
@@ -51,75 +51,76 @@ int main()
         }
         if (code == 2)
         {
-            if(index>0){
-            printf("qingshuruxueshengxingming\n");
-            scanf("%s", arr[index].name);
+            if (index > 0)
+            {
+                printf("qingshuruxueshengxingming\n");
+                scanf("%s", arr[index].name);
 
-            printf("qingshuyuwenchengji\n");
-            scanf("%d", &(arr[index].yuwen));
+                printf("qingshuyuwenchengji\n");
+                scanf("%d", &(arr[index].yuwen));
 
-            printf("qingshurushuxuechengji\n");
-            scanf("%d", &(arr[index].shuxue));
+                printf("qingshurushuxuechengji\n");
+                scanf("%d", &(arr[index].shuxue));
 
-            printf("qingshuruyingyuchengji\n");
-            scanf("%d", &(arr[index].yingyu));
+                printf("qingshuruyingyuchengji\n");
+                scanf("%d", &(arr[index].yingyu));
 
-            index--;
-            printf("shanchuchenggong,dianjihuichejixu\n");
-            char x;
-            scanf("%c", &x);
-            scanf("%c", &x);
-            }else{
+                index--;
+                printf("shanchuchenggong,dianjihuichejixu\n");
+                char x;
+                scanf("%c", &x);
+                scanf("%c", &x);
+            }
+            else
+            {
                 printf("shanchushibai,dianjihuichejixu\n");
                 char x;
-                scanf("%c",&x);
-                scanf("%c",&x);
+                scanf("%c", &x);
+                scanf("%c", &x);
             }
         }
         if (code == 3)
         {
             printf("suoyouxueshengchengjiruxia:\n");
-            
-            for(int i = 0; i < index; i++)
+
+            for (int i = 0; i < index; i++)
             {
-                printf("%d %s %d %d %d\n",i+1,arr[i].name,arr[i].yuwen,arr[i].shuxue,arr[i].yingyu);
+                printf("%d %s %d %d %d\n", i + 1, arr[i].name, arr[i].yuwen, arr[i].shuxue, arr[i].yingyu);
             }
             printf("dianjihuichejixu\n");
             char x;
-            scanf("%c",&x);
-            scanf("%c",&x);
-            
+            scanf("%c", &x);
+            scanf("%c", &x);
         }
         if (code == 4)
         {
-            
-            for(int i = 0; i < index; i++)
+
+            for (int i = 0; i < index; i++)
             {
-                sum=arr[i].yuwen+arr[i].shuxue+arr[i].yingyu;
-                if(sum<180){
-                    printf("%dxuesheng%schengjibujige\n",i+1,arr[i].name);
-                } 
+                sum = arr[i].yuwen + arr[i].shuxue + arr[i].yingyu;
+                if (sum < 180)
+                {
+                    printf("%dxuesheng%schengjibujige\n", i + 1, arr[i].name);
+                }
             }
             printf("shaixuanwancheng,dianjihuichejixu\n");
             char x;
-            scanf("%c",&x);
-            scanf("%c",&x);
-            
-
+            scanf("%c", &x);
+            scanf("%c", &x);
         }
         if (code == 5)
         {
-            for(int i=0;i<index;i++)
+            for (int i = 0; i < index; i++)
             {
-                if(arr[i].yuwen<60&&arr[i].shuxue<60&&arr[i].yingyu<60){
-                    printf("%dxuesheng%sdemeiyikedoubujige\n",i+1,arr[i].name);
+                if (arr[i].yuwen < 60 && arr[i].shuxue < 60 && arr[i].yingyu < 60)
+                {
+                    printf("%dxuesheng%sdemeiyikedoubujige\n", i + 1, arr[i].name);
                 }
             }
             printf("dianjihuichejixu\n");
             char x;
-            scanf("%c",&x);
-            scanf("%c",&x);
-
+            scanf("%c", &x);
+            scanf("%c", &x);
         }
         if (code == 6)
         {
@@ -129,25 +130,37 @@ int main()
             for (int i = 0; i < index; i++)
             {
                 int sum;
-                sum=arr[i].yuwen+arr[i].shuxue+arr[i].yingyu;
-
+                sum = arr[i].yuwen + arr[i].shuxue + arr[i].yingyu;
                 if (max < sum)
                 {
-                    
                     max = sum;
-                    ID=i;
+                    ID = i;
                 }
-                
             }
-            printf("%s %d\n",arr[ID].name,max);
+            printf("%s %d\n", arr[ID].name, max);
             printf("dianjihuichejixu\n");
             char x;
             scanf("%c", &x);
             scanf("%c", &x);
-
         }
         if (code == 7)
         {
+            int max=0;
+            int stuid=0;
+            for(int i=0;i<index;i++){
+                if(arr[i].yuwen>=60&&arr[i].shuxue>=60&&arr[i].yingyu>=60){
+                    double avg=(arr[i].yuwen+arr[i].shuxue+arr[i].yingyu)/3.0;
+                    if(max<avg){
+                        max=avg;
+                        stuid=i;
+                    }
+                }
+            }
+            printf("%s,yuwen%d,shuxue%d,yingyu%d\n",arr[stuid].name,arr[stuid].yuwen,arr[stuid].shuxue,arr[stuid].yingyu);
+            printf("\ndianjihuichejixu\n");
+            char x;
+            scanf("%c",&x);
+            scanf("%c",&x);
         }
         if (code == 8)
         {

@@ -50,6 +50,30 @@ int main()
         }
         if (code == 2)
         {
+            if(index>0){
+            printf("qingshuruxueshengxingming\n");
+            scanf("%s", arr[index].name);
+
+            printf("qingshuyuwenchengji\n");
+            scanf("%d", &(arr[index].yuwen));
+
+            printf("qingshurushuxuechengji\n");
+            scanf("%d", &(arr[index].shuxue));
+
+            printf("qingshuruyingyuchengji\n");
+            scanf("%d", &(arr[index].yingyu));
+
+            index--;
+            printf("shanchuchenggong,dianjihuichejixu\n");
+            char x;
+            scanf("%c", &x);
+            scanf("%c", &x);
+            }else{
+                printf("shanchushibai,dianjihuichejixu\n");
+                char x;
+                scanf("%c",&x);
+                scanf("%c",&x);
+            }
         }
         if (code == 3)
         {

@@ -109,7 +109,17 @@ int main()
         }
         if (code == 5)
         {
-            
+            for(int i=0;i<index;i++)
+            {
+                if(arr[i].yuwen<60&&arr[i].shuxue<60&&arr[i].yingyu<60){
+                    printf("%dxuesheng%sdemeiyikedoubujige\n",i+1,arr[i].name);
+                }
+            }
+            printf("dianjihuichejixu\n");
+            char x;
+            scanf("%c",&x);
+            scanf("%c",&x);
+
         }
         if (code == 6)
         {

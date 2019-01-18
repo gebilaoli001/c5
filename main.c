@@ -123,6 +123,28 @@ int main()
         }
         if (code == 6)
         {
+            int max = 0;
+            int ID;
+
+            for (int i = 0; i < index; i++)
+            {
+                int sum;
+                sum=arr[i].yuwen+arr[i].shuxue+arr[i].yingyu;
+
+                if (max < sum)
+                {
+                    
+                    max = sum;
+                    ID=i;
+                }
+                
+            }
+            printf("%s %d\n",arr[ID].name,max);
+            printf("dianjihuichejixu\n");
+            char x;
+            scanf("%c", &x);
+            scanf("%c", &x);
+
         }
         if (code == 7)
         {
